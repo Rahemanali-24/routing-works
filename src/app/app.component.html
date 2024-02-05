@@ -1,0 +1,46 @@
+<h2>code dive into angular</h2>
+
+<a routerLink="">Home</a>
+<br>
+<a routerLink="about">About</a>
+<br>
+
+<a routerLink="user">User</a>
+
+
+
+<br><br>
+<a routerLink="user/20">Anil</a>
+<br>
+<a routerLink="user/10">Sam</a>
+<br>
+<a routerLink="user/5">Bhaskar</a>
+<br>
+
+<!-- <router-outlet></router-outlet> -->
+
+
+<!-- <ul>
+  <li *ngFor="let data of memberData">
+    {{data.name}}
+  </li>
+</ul> -->
+
+<!-- <app-footer></app-footer> -->
+
+
+
+<!-- <ul>
+  <li *ngFor="let user of users">
+    {{user.name}}
+  </li>
+</ul> -->
+
+<div *ngIf="users">
+  <h2>Users</h2>
+  <ul>
+    <li *ngFor="let user of users">
+      Name: {{ user.title }}, Email: {{ user.title }}
+    </li>
+  </ul>
+</div>
