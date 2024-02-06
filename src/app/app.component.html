@@ -36,11 +36,67 @@
   </li>
 </ul> -->
 
-<div *ngIf="users">
+<!-- <div *ngIf="users">
   <h2>Users</h2>
   <ul>
     <li *ngFor="let user of users">
       Name: {{ user.title }}, Email: {{ user.title }}
     </li>
   </ul>
+</div> -->
+
+<div>
+  <h2>GET Request Response:</h2>
+  <ul>
+    <li *ngFor="let item of getResponse">
+      <strong>User ID:</strong> {{ item.userId }}<br>
+      <strong>ID:</strong> {{ item.id }}<br>
+      <strong>Title:</strong> {{ item.title }}<br>
+      <strong>Body:</strong> {{ item.body }}<br>
+    </li>
+  </ul>
 </div>
+
+
+
+
+//post 
+<br><br><br><br>
+<div>
+  <h2>POST Request Response:</h2>
+  <strong>User ID:</strong> {{ postResponse.userId }}<br>
+  <strong>ID:</strong> {{ postResponse.id }}<br>
+  <strong>Title:</strong> {{ postResponse.title }}<br>
+  <strong>Body:</strong> {{ postResponse.body }}<br>
+</div>
+
+
+
+  <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+    <input type="text" ngModel name="name" placeholder="Enter Name">
+    <br><br>
+    <input type="text" ngModel name="email" placeholder="Enter Email">
+    <br><br>
+    <input type="password" ngModel name="password" placeholder="Enter Password">
+    <br><br>
+    <button>Add New User </button>
+  </form>
+
+
+
+  <app-user-for-module></app-user-for-module>
+
+ <ul>
+  <li>
+    <a routerLink="login">login</a>
+   
+  </li>
+
+  <li>
+    <a routerLink="list">list</a>
+
+  </li>
+ </ul>
+
+
+ <router-outlet></router-outlet>

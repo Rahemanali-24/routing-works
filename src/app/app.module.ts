@@ -10,7 +10,9 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
-
+import {FormsModule} from '@angular/forms';
+import {UserForModuleModule} from './user-for-module/user-for-module.module';
+import {AdminModule} from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,9 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    UserForModuleModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
